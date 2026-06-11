@@ -1,4 +1,3 @@
-// components/Hero.tsx
 import Link from 'next/link'
 
 export default function Hero() {
@@ -31,9 +30,8 @@ export default function Hero() {
             Manufacturing implant-grade and mission-critical medical components since 1978.
           </p>
 
-          {/* Call To Action Buttons Group */}
+          {/* buttons group */}
           <div className="flex flex-wrap gap-4 pt-4">
-            {/* Primary Filled Button */}
             <Link href="/quote" className="btn-primary group h-12 px-6">
               Request a Quote
               <svg 
@@ -46,7 +44,6 @@ export default function Hero() {
               </svg>
             </Link>
 
-            {/* Secondary Bordered Button */}
             <Link href="/quality" className="btn-secondary group h-12 px-6">
               View Quality Systems
               <svg 
@@ -61,20 +58,18 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Side: Scalpel Image Focus */}
+        {/* the image on the right side */}
         <div className="flex-1 relative w-full lg:w-auto flex justify-center lg:justify-end">
           {/* Subtle background glow mimicking the studio lighting in the image */}
           <div className="absolute inset-0 bg-radial from-gray-50 via-transparent to-transparent scale-150 -z-10" />
           
           {/* 
-            Production Note: In your actual app, replace the placeholder <img> with 
-            Next.js `<Image src="/scalpel.png" width={600} height={400} priority />`
+            place the image over here whenever it is provided
           */}
           
         </div>
       </div>
 
-      {/* 2. Bottom Specs / Capabilities Ribbon Grid */}
       <div className="w-full bg-gray-50/70 border-t border-b border-[--color-brand-border] py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
           
