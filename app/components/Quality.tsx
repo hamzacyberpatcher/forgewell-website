@@ -3,9 +3,8 @@ import { industrialFeatures } from "@/lib/consts";
 
 export default function IndustrialGrid() {
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-16 h-[calc(100vh-var(--spacing-navbar))] flex flex-col py-12">
-
-      <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 pb-10 border-b border-current/10 shrink-0">
+    <div className="w-full px-4 sm:px-8 lg:px-16 flex flex-col py-12">
+      <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 pb-10 border-b border-current/10">
         <div className="max-w-2xl">
           <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-5 opacity-50">
             Why choose forgewell?
@@ -22,23 +21,25 @@ export default function IndustrialGrid() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-8">
-      {industrialFeatures.map((item) => (
-        <div key={item.id} className="quality-card">
-          <span className="card-counter">{item.id}</span>
-          
-          <div className="card-icon-box">
-            <Image src={`${item.iconName}.svg`} alt={`${item.title} icon`} width={20} height={20} />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 place-items-center md:place-items-stretch">
+        {industrialFeatures.map((item) => (
+          <div key={item.id} className="quality-card">
+            <span className="card-counter">{item.id}</span>
+            <div className="card-icon-box">
+              <Image
+                src={`${item.iconName}.svg`}
+                alt={`${item.title} icon`}
+                width={20}
+                height={20}
+              />
+            </div>
+            <div>
+              <h3 className="card-title">{item.title}</h3>
+              <p className="card-body">{item.desc}</p>
+            </div>
           </div>
-
-          <div>
-            <h3 className="card-title">{item.title}</h3>
-            <p className="card-body">{item.desc}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-
+        ))}
+      </div>
     </div>
   );
 }
