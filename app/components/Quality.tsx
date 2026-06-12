@@ -28,8 +28,7 @@ export default function IndustrialGrid() {
           <span className="card-counter">{item.id}</span>
           
           <div className="card-icon-box">
-            <Image src={`${item.iconName}.svg`} alt={`${item.title} icon`} width={20} height={20} 
-            className="opacity-80 transition-opacity duration-300 group-hover:opacity-100"/>
+            <Image src={`${item.iconName}.svg`} alt={`${item.title} icon`} width={20} height={20} />
           </div>
 
           <div>
