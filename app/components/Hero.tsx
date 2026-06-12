@@ -53,7 +53,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Completely hidden on mobile, renders as a layout-balanced half-section on md screens and up */}
         <div className="hidden lg:flex flex-1 justify-end">
           <div className="relative w-[45vw] max-w-[750px] min-w-[500px] aspect-[5/4]">
             <Image
