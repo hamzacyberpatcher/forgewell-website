@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { industrialFeatures } from "@/lib/industrial_features";
+import { industrialFeatures } from "@/lib/consts";
 
 export default function IndustrialGrid() {
   return (

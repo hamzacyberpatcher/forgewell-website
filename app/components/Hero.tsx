@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { specsData } from '@/lib/consts'
 
 export default function Hero() {
   return (
@@ -69,35 +70,26 @@ export default function Hero() {
 
       <div className="w-full bg-gray-50/70 border-t border-b border-[--color-brand-border] py-8">
         <div className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-
-          <div className="space-y-1">
-            <span className="label-caps block text-[10px]">Tolerance</span>
-            <div className="text-sm md:text-2xl tracking-tight text-[--color-brand-text-dark]">
-              &plusmn;0.0002&quot;
+          {specsData.map((spec) => (
+            <div
+              key={spec.label}
+              className={[
+                "space-y-1",
+                spec.hasLeftBorder ? "border-l border-gray-200 pl-6 md:pl-8" : "",
+                spec.hasResponsiveBorder ? "md:border-l border-gray-200 md:pl-6" : "",
+              ].filter(Boolean).join(" ")}
+            >
+              <span className="label-caps block text-[10px]">{spec.label}</span>
+              <div
+                className={[
+                  "text-sm md:text-2xl tracking-tight text-[--color-brand-text-dark]",
+                  spec.isUppercase ? "uppercase" : "",
+                ].filter(Boolean).join(" ")}
+              >
+                {spec.value}
+              </div>
             </div>
-          </div>
-
-          <div className="space-y-1 border-l border-gray-200 pl-6 md:pl-8">
-            <span className="label-caps block text-[10px]">Quality Management</span>
-            <div className="text-sm md:text-2xl tracking-tight text-[--color-brand-text-dark] uppercase">
-              ISO 13485:2016
-            </div>
-          </div>
-
-          <div className="space-y-1 md:border-l border-gray-200 md:pl-6">
-            <span className="label-caps block text-[10px]">Regulatory</span>
-            <div className="text-sm md:text-2xl tracking-tight text-[--color-brand-text-dark] uppercase">
-              FDA Registered
-            </div>
-          </div>
-
-          <div className="space-y-1 border-l border-gray-200 pl-6 md:pl-8">
-            <span className="label-caps block text-[10px]">Cleanroom Capability</span>
-            <div className="text-sm md:text-2xl tracking-tight text-[--color-brand-text-dark] uppercase">
-              Class 8 Cleanroom
-            </div>
-          </div>
-
+          ))}
         </div>
       </div>
     </section>

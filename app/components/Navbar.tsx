@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { navLinks } from '@/lib/consts'
 
 export default function Navbar() {
   return (
@@ -15,12 +16,9 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden xl:flex items-center gap-6">
-          <Link href="/capabilities" className="nav-link">Capabilities</Link>
-          <Link href="/industries" className="nav-link">Industries</Link>
-          <Link href="/quality" className="nav-link">Quality & Compliance</Link>
-          <Link href="/case-studies" className="nav-link">Case Studies</Link>
-          <Link href="/about" className="nav-link">About</Link>
-          <Link href="/contact" className="nav-link">Contact</Link>
+          {navLinks.map(navlink => (
+            <Link key={navlink.href} href={navlink.href} className="nav-link">{navlink.label}</Link>
+          ))}
         </nav>
 
         {/* buttons on the right side */}
