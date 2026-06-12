@@ -12,6 +12,8 @@
   --radius-brand: 2px;
   --letter-spacing-tightest: -0.02em;
   --letter-spacing-widest-caps: 0.15em;
+
+  --spacing-navbar: 5rem;
 }
 
 @layer base {
