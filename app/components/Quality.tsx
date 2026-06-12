@@ -12,7 +12,7 @@ export default function IndustrialGrid() {
           </p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-tight">
             Engineered for<br />
-            <span className="opacity-40">zero failure</span><br />
+            <span className="text-brand-primary">zero failure</span><br />
             at scale.
           </h1>
         </div>
