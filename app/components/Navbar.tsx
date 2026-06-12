@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Navbar() {
   return (
     <header className="w-full bg-white border-b border-[--color-brand-border] sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div className="w-full px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         
         <Link href="/" className="flex flex-col">
           <span className="text-2xl font-bold tracking-wider text-(--color-brand-primary)">
@@ -24,10 +24,10 @@ export default function Navbar() {
         </nav>
 
         {/* buttons on the right side */}
-        <div className="flex items-center gap-4">
+        <div className="hidden sm:flex sm:items-center sm:gap-4">
           <a 
             href="tel:+16035550123" 
-            className="hidden md:flex items-center gap-1.5 text-sm font-semibold text-[--color-brand-primary] hover:opacity-80 transition-opacity"
+            className="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-[--color-brand-primary] hover:opacity-80 transition-opacity"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
