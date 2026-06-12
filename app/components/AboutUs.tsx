@@ -7,7 +7,7 @@ const AboutUs = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center px-5 sm:px-8 lg:px-0 pt-4 lg:pt-0 h-1/2 lg:h-full">
         <div className="relative w-[60%] sm:w-[50%] md:w-[45%] lg:w-[65%] xl:w-[55%] h-full max-h-[90%]">
           <Image
-            src="/deckel.png"
+            src="pictures/deckel.png"
             alt="Forgewell machinery"
             fill
             priority
