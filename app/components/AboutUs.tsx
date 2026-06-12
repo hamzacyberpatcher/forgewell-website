@@ -21,10 +21,10 @@ const AboutUs = () => {
         <div className="w-full space-y-3 sm:space-y-4">
           <p className="text-gray-300 text-sm sm:text-base tracking-wide">Since 1978</p>
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl leading-tight font-semibold">
-            We've kept on delivering
+            We&apos;ve kept on delivering
           </h1>
           <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-full">
-            We've been delivering quality for 45+ years, and now our parts
+            We&apos;ve been delivering quality for 45+ years, and now our parts
             move everything, from life-saving surgical tools to defense applications.
             Times have changed, but we are still remembered for our speedy deliveries
             and excellent quality.
