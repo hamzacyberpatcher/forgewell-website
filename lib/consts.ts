@@ -51,7 +51,7 @@ export const specsData = [
     label: "Regulatory",
     value: "FDA Registered",
     isUppercase: true,
-    hasResponsiveBorder: true 
+    hasResponsiveBorder: true
   },
   {
     label: "Cleanroom Capability",
@@ -60,3 +60,20 @@ export const specsData = [
     hasLeftBorder: true
   }
 ];
+
+export const imageLogos = [
+  { src: "/logos/3M.png", alt: "3M", href: "https://www.3m.com/" },
+  { src: "/logos/Bombardier.png", alt: "Bombardier", href: "https://bombardier.com/" },
+  { src: "/logos/CAT.png", alt: "CAT", href: "https://www.caterpillar.com/" },
+  { src: "/logos/contienental.png", alt: "Continental", href: "https://www.continental.com/" },
+  { src: "/logos/enkei.png", alt: "Enkei", href: "https://enkei.com/" },
+  { src: "/logos/hks.png", alt: "HKS", href: "https://www.hks-power.co.jp/en/index.html" },
+  { src: "/logos/hyster.png", alt: "Hyster", href: "https://www.hyster.com/en-us/north-america/" },
+  { src: "/logos/kohler.png", alt: "Kohler", href: "https://www.kohler.com/en" }
+];
+
+export const metrics = [
+  { value: '200+', label: 'Global clients' },
+  { value: '18', label: 'Industries served' },
+  { value: '$4B+', label: 'Parts produced annually' },
+]
