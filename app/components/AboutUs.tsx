@@ -4,7 +4,6 @@ const AboutUs = () => {
   return (
     <div className="w-full flex flex-col lg:flex-row bg-brand-primary overflow-hidden py-6 sm:py-8 lg:py-0 h-[calc(100vh-var(--spacing-navbar))]">
       
-        {/* Image side */}
       <div className="w-full lg:w-1/2 flex items-center justify-center px-5 sm:px-8 lg:px-0 pt-4 lg:pt-0 h-1/2 lg:h-full">
         <div className="relative w-[60%] sm:w-[50%] md:w-[45%] lg:w-[65%] xl:w-[55%] h-full max-h-[90%]">
           <Image
@@ -18,7 +17,6 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Text side */}
       <div className="w-full lg:w-1/2 px-5 sm:px-8 lg:px-12 xl:px-16 flex items-center py-4 lg:py-10">
         <div className="w-full space-y-3 sm:space-y-4">
           <p className="text-gray-300 text-sm sm:text-base tracking-wide">Since 1978</p>
