@@ -77,3 +77,24 @@ export const metrics = [
   { value: '18', label: 'Industries served' },
   { value: '$4B+', label: 'Parts produced annually' },
 ]
+
+export const explore = [
+  { 
+    title: 'Sustainability', 
+    text: "Sustainability is an integral part of our business. By setting ambitious goals of our own, we aspire to enable the future of a sustainable supply chain.",
+    image: "/pictures/landscape.jpeg",
+    button: 'View Sustainability Efforts'
+  },
+  {
+    title: 'Innovation',
+    text: "We constantly push boundaries by integrating cutting-edge technology and smart solutions, ensuring our operations remain agile and future-ready.",
+    image: "/pictures/innovation.jpg",
+    button: "Our Philosphy"
+  },
+  {
+    title: 'Collaboration',
+    text: "Building strong partnerships is at the heart of what we do. Together with our clients and communities, we drive shared growth and meaningful impact.",
+    image: "/pictures/collaboration.jpg",
+    button: "Community Efforts"
+  }
+];
