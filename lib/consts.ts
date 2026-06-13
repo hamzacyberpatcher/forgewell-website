@@ -35,30 +35,10 @@ export const navLinks = [
 ];
 
 export const specsData = [
-  {
-    label: "Tolerance",
-    value: "±0.0002\"",
-    isUppercase: false,
-    hasLeftBorder: false
-  },
-  {
-    label: "Quality Management",
-    value: "ISO 13485:2016",
-    isUppercase: true,
-    hasLeftBorder: true
-  },
-  {
-    label: "Regulatory",
-    value: "FDA Registered",
-    isUppercase: true,
-    hasResponsiveBorder: true
-  },
-  {
-    label: "Cleanroom Capability",
-    value: "Class 8 Cleanroom",
-    isUppercase: true,
-    hasLeftBorder: true
-  }
+  { label: "Tolerance",           value: "±0.0002\"",        isUppercase: false },
+  { label: "Quality Management",  value: "ISO 13485:2016",   isUppercase: true  },
+  { label: "Regulatory",          value: "FDA Registered",   isUppercase: true  },
+  { label: "Cleanroom Capability",value: "Class 8 Cleanroom",isUppercase: true  },
 ];
 
 export const imageLogos = [

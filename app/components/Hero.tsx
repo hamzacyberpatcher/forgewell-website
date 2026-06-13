@@ -52,16 +52,9 @@ export default function Hero() {
         </div>
       </div>
       <div className="w-full bg-gray-50/70 border-t border-b border-[--color-brand-border] py-8">
-        <div className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 specs-grid">
           {specsData.map((spec) => (
-            <div
-              key={spec.label}
-              className={[
-                "space-y-1",
-                spec.hasLeftBorder ? "border-l border-gray-200 pl-6 md:pl-8" : "",
-                spec.hasResponsiveBorder ? "md:border-l border-gray-200 md:pl-6" : "",
-              ].filter(Boolean).join(" ")}
-            >
+            <div key={spec.label} className="space-y-1 spec-item">
               <span className="label-caps block text-[10px]">{spec.label}</span>
               <div className={["text-sm md:text-2xl tracking-tight text-[--color-brand-text-dark]", spec.isUppercase ? "uppercase" : ""].filter(Boolean).join(" ")}>
                 {spec.value}

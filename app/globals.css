@@ -184,7 +184,22 @@
   }
 
   button {
-    margin-top: auto; /* pushes button to bottom always */
+    margin-top: auto;
     @apply mb-10;
+  }
+}
+
+@layer utilities {
+  .spec-item:nth-child(even) {
+    @apply border-l border-gray-200 pl-6;
+  }
+
+  @media (min-width: 768px) {
+    .spec-item:not(:first-child) {
+      @apply border-l border-gray-200 pl-8;
+    }
+    .spec-item:first-child {
+      @apply border-l-0 pl-0;
+    }
   }
 }
