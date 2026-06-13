@@ -1,4 +1,5 @@
 import Image from "next/image"
+import deckel from "@/public/pictures/deckel.png"
 
 const AboutUs = () => {
   return (
@@ -7,12 +8,13 @@ const AboutUs = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center px-5 sm:px-8 lg:px-0 pt-4 lg:pt-0 h-1/2 lg:h-full">
         <div className="relative w-[60%] sm:w-[50%] md:w-[45%] lg:w-[65%] xl:w-[55%] h-full max-h-[90%]">
           <Image
-            src="/pictures/deckel.png"
+            src={deckel}
             alt="Forgewell machinery"
             fill
             priority
             className="object-contain"
             sizes="(max-width: 640px) 60vw, (max-width: 768px) 50vw, (max-width: 1024px) 45vw, 35vw"
+            placeholder="blur"
           />
         </div>
       </div>
