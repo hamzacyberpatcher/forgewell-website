@@ -35,10 +35,26 @@ export const navLinks = [
 ];
 
 export const specsData = [
-  { label: "Tolerance",           value: "±0.0002\"",        isUppercase: false },
-  { label: "Quality Management",  value: "ISO 13485:2016",   isUppercase: true  },
-  { label: "Regulatory",          value: "FDA Registered",   isUppercase: true  },
-  { label: "Cleanroom Capability",value: "Class 8 Cleanroom",isUppercase: true  },
+  {
+    label: "Tolerance", 
+    value: "±0.0002\"", 
+    isUppercase: false 
+  },
+  {
+    label: "Quality Management", 
+    value: "ISO 13485:2016", 
+    isUppercase: true
+  },
+  {
+    label: "Regulatory", 
+    value: "FDA Registered", 
+    isUppercase: true
+  },
+  {
+    label: "Cleanroom Capability",
+    value: "Class 8 Cleanroom",
+    isUppercase: true
+  },
 ];
 
 export const imageLogos = [
@@ -78,3 +94,41 @@ export const explore = [
     button: "Community Efforts"
   }
 ];
+
+export const footerLinks = [
+    {
+        heading: "Company",
+        links: [
+            { label: "About", href: "/about" },
+            { label: "Careers", href: "/careers" },
+            { label: "Brand Center", href: "/brand" },
+            { label: "Blog", href: "/blog" },
+        ],
+    },
+    {
+        heading: "Help Center",
+        links: [
+            { label: "Discord Server", href: "https://discord.gg" },
+            { label: "Twitter", href: "https://twitter.com" },
+            { label: "Facebook", href: "https://facebook.com" },
+            { label: "Contact Us", href: "/contact" },
+        ],
+    },
+    {
+        heading: "Legal",
+        links: [
+            { label: "Privacy Policy", href: "/privacy" },
+            { label: "Licensing", href: "/licensing" },
+            { label: "Terms & Conditions", href: "/terms" },
+        ],
+    },
+    {
+        heading: "Download",
+        links: [
+            { label: "iOS", href: "https://apps.apple.com" },
+            { label: "Android", href: "https://play.google.com" },
+            { label: "Windows", href: "/download/windows" },
+            { label: "MacOS", href: "/download/macos" },
+        ],
+    },
+]

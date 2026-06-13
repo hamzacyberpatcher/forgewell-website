@@ -3,7 +3,7 @@ import { explore } from "@/lib/consts"
 
 export const Explore = () => {
   return (
-    <section className="w-full bg-white lg:h-[calc(100vh-var(--spacing-navbar))] lg:overflow-hidden">
+    <section className="w-full bg-white lg:h-[calc(100vh-var(--spacing-navbar))] lg:overflow-hidden mb-4">
       <div className="h-full max-w-7xl mx-auto px-6 pt-2 flex flex-col gap-8">
 
         <div className="flex flex-col items-center gap-3 text-center shrink-0">
