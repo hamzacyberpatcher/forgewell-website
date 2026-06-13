@@ -1,4 +1,4 @@
-import LogoLoop from './LogoLoop';
+import LogoLoop from '@/components/LogoLoop';
 import { imageLogos } from '@/lib/consts';
 import { metrics } from '@/lib/consts';
 
