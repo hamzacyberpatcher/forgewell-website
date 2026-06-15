@@ -1,21 +1,23 @@
 import Image from "next/image"
 import { explore } from "@/lib/consts"
+import ScrollReveal from "@/components/ScrollReveal"
+import ScrollStagger from "@/components/ScrollStagger"
 
 export const Explore = () => {
   return (
     <section className="w-full bg-white lg:h-[calc(100vh-var(--spacing-navbar))] lg:overflow-hidden mb-4 max-sm:mt-3">
       <div className="h-full max-w-7xl mx-auto px-6 pt-2 flex flex-col gap-8">
 
-        <div className="flex flex-col items-center gap-3 text-center shrink-0">
+        <ScrollReveal delay={0.1} className="flex flex-col items-center gap-3 text-center shrink-0">
           <h1>Explore more about us</h1>
           <p className="max-w-xl text-balance">
             Get to know more about our worldclass infrastructure, cutting edge
             products and the opportunities that await for you at forgewell
           </p>
-        </div>
+        </ScrollReveal>
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch justify-items-center min-h-0 flex-1">
+        <ScrollStagger staggerDelay={0.2} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch justify-items-center min-h-0 flex-1">
           {explore.map((item) => (
             <article key={item.title} className="feature-card">
               <div className="feature-card-image-wrapper">
@@ -41,7 +43,7 @@ export const Explore = () => {
               </div>
             </article>
           ))}
-        </div>
+        </ScrollStagger>
 
       </div>
     </section>
