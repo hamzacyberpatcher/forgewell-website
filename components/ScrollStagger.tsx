@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, Children } from "react";
 
 type ScrollStaggerProps = {
   children: ReactNode;
   staggerDelay?: number;
   yOffset?: number;
+  className?: string;
+  itemClassName?: string;
 };
 
 const containerVariants = (staggerDelay: number) => ({
@@ -28,7 +30,7 @@ const itemVariants = (yOffset: number) => ({
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 });
@@ -37,25 +39,26 @@ export default function ScrollStagger({
   children,
   staggerDelay = 0.12,
   yOffset = 30,
+  className = "",
+  itemClassName = "",
 }: ScrollStaggerProps) {
   return (
     <motion.div
+      className={className}
       variants={containerVariants(staggerDelay)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {Array.isArray(children)
-        ? children.map((child, i) => (
-            <motion.div key={i} variants={itemVariants(yOffset)}>
-              {child}
-            </motion.div>
-          ))
-        : (
-          <motion.div variants={itemVariants(yOffset)}>
-            {children}
-          </motion.div>
-        )}
+      {Children.map(children, (child, i) => (
+        <motion.div 
+          key={i} 
+          className={itemClassName} 
+          variants={itemVariants(yOffset)}
+        >
+          {child}
+        </motion.div>
+      ))}
     </motion.div>
   );
 }
