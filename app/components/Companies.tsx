@@ -1,17 +1,36 @@
 import LogoLoop from '@/components/LogoLoop';
 import { imageLogos } from '@/lib/consts';
 import { metrics } from '@/lib/consts';
+import CountUp from '@/components/CountUp';
+
+const SmartCountUp = ({ value }: { value: string | number }) => {
+  const match = String(value).match(/^([^\d]*)([\d.,]+)([^0-9]*)$/);
+
+  if (!match) return <>{value}</>;
+
+  const prefix = match[1];
+  const numberValue = parseFloat(match[2].replace(/,/g, ''));
+  const suffix = match[3];
+
+  return (
+    <>
+      {prefix}
+      <CountUp to={numberValue} separator="," delay={0.2} />
+      {suffix}
+    </>
+  );
+};
 
 const Companies = () => {
   return (
     <div className="relative w-full bg-brand-primary text-brand-text-dark flex flex-col lg:h-[calc(100vh-var(--spacing-navbar))] lg:overflow-hidden">
-
       <div className="flex-1 flex flex-col justify-center px-4 sm:px-8 lg:px-16 py-16 lg:py-0">
-
+        
         <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-8 text-gray-500">Trusted by industry leaders</p>
 
         <div className="relative">
-          <span className="absolute -top-8 -left-2 sm:-left-4 text-[8rem] sm:text-[12rem] lg:text-[16rem] font-black leading-none select-none pointer-events-none opacity-10"aria-hidden="true">
+          {/* Optional: You can also use SmartCountUp here if you want the giant background text to animate! */}
+          <span className="absolute -top-8 -left-2 sm:-left-4 text-[8rem] sm:text-[12rem] lg:text-[16rem] font-black leading-none select-none pointer-events-none opacity-10" aria-hidden="true">
             200+
           </span>
 
@@ -25,7 +44,9 @@ const Companies = () => {
         <div className="mt-10 flex flex-wrap gap-x-10 gap-y-6 border-t border-white/10 pt-8">
           {metrics.map(({ value, label }) => (
             <div key={label} className="flex flex-col gap-1">
-              <span className="text-3xl sm:text-4xl text-black font-bold tracking-tight">{value}</span>
+              <span className="text-3xl sm:text-4xl text-black font-bold tracking-tight">
+                <SmartCountUp value={value} />
+              </span>
               <span className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{label}</span>
             </div>
           ))}
@@ -48,7 +69,6 @@ const Companies = () => {
           ariaLabel="Technology partners"
         />
       </div>
-
     </div>
   );
 };
