@@ -2,6 +2,7 @@ import LogoLoop from '@/components/LogoLoop';
 import { imageLogos } from '@/lib/consts';
 import { metrics } from '@/lib/consts';
 import CountUp from '@/components/CountUp';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const SmartCountUp = ({ value }: { value: string | number }) => {
   const match = String(value).match(/^([^\d]*)([\d.,]+)([^0-9]*)$/);
@@ -24,34 +25,35 @@ const SmartCountUp = ({ value }: { value: string | number }) => {
 const Companies = () => {
   return (
     <div className="relative w-full bg-brand-primary text-brand-text-dark flex flex-col lg:h-[calc(100vh-var(--spacing-navbar))] lg:overflow-hidden">
-      <div className="flex-1 flex flex-col justify-center px-4 sm:px-8 lg:px-16 py-16 lg:py-0">
+      <ScrollReveal className="flex-1 flex flex-col justify-center px-4 sm:px-8 lg:px-16 py-16 lg:py-0">
         
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-8 text-gray-500">Trusted by industry leaders</p>
 
-        <div className="relative">
-          {/* Optional: You can also use SmartCountUp here if you want the giant background text to animate! */}
-          <span className="absolute -top-8 -left-2 sm:-left-4 text-[8rem] sm:text-[12rem] lg:text-[16rem] font-black leading-none select-none pointer-events-none opacity-10" aria-hidden="true">
-            200+
-          </span>
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-8 text-gray-500">Trusted by industry leaders</p>
 
-          <h2 className="text-black relative text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight max-w-2xl">
-            Built alongside the<br />
-            world&apos;s most demanding<br />
-            <span className='text-white'>manufacturers.</span>
-          </h2>
-        </div>
+          <div className="relative">
+            <span className="absolute -top-8 -left-2 sm:-left-4 text-[8rem] sm:text-[12rem] lg:text-[16rem] font-black leading-none select-none pointer-events-none opacity-10" aria-hidden="true">
+              200+
+            </span>
 
-        <div className="mt-10 flex flex-wrap gap-x-10 gap-y-6 border-t border-white/10 pt-8">
-          {metrics.map(({ value, label }) => (
-            <div key={label} className="flex flex-col gap-1">
-              <span className="text-3xl sm:text-4xl text-black font-bold tracking-tight">
-                <SmartCountUp value={value} />
-              </span>
-              <span className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+            <h2 className="text-black relative text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight max-w-2xl">
+              Built alongside the<br />
+              world&apos;s most demanding<br />
+              <span className='text-white'>manufacturers.</span>
+            </h2>
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-x-10 gap-y-6 border-t border-white/10 pt-8">
+            {metrics.map(({ value, label }) => (
+              <div key={label} className="flex flex-col gap-1">
+                <span className="text-3xl sm:text-4xl text-black font-bold tracking-tight">
+                  <SmartCountUp value={value} />
+                </span>
+                <span className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{label}</span>
+              </div>
+            ))}
+          </div>
+        
+      </ScrollReveal>
 
       <div className="w-full border-t border-white/10 shrink-0" />
 
