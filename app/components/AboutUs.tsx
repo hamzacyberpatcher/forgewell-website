@@ -6,8 +6,7 @@ const AboutUs = () => {
   return (
     <div className="w-full flex flex-col lg:flex-row bg-brand-primary overflow-hidden py-6 sm:py-8 lg:py-0 h-[calc(100vh-var(--spacing-navbar))]">
       
-      {/* Image Side: Comes in from the left (direction="right") */}
-      <ScrollReveal 
+      <ScrollReveal delay={0.2} direction="up" 
         direction="right" 
         className="w-full lg:w-1/2 flex items-center justify-center px-5 sm:px-8 lg:px-0 pt-4 lg:pt-0 h-1/2 lg:h-full"
       >
@@ -24,8 +23,7 @@ const AboutUs = () => {
         </div>
       </ScrollReveal>
 
-      {/* Text Side: Comes in from the right (direction="left") */}
-      <ScrollReveal 
+      <ScrollReveal delay={0.2} direction="down" 
         direction="left" 
         delay={0.1} 
         className="w-full lg:w-1/2 px-5 sm:px-8 lg:px-12 xl:px-16 flex items-center py-4 lg:py-10"
