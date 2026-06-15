@@ -2,16 +2,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { specsData } from '@/lib/consts'
 import scissors from '@/public/pictures/scissors.png'
-import ScrollStagger from '@/components/ScrollStagger';
+import ScrollReveal from '@/components/ScrollReveal'
 
 export default function Hero() {
   return (
-    <ScrollStagger staggerDelay={0.1}>
       <section className="relative w-full bg-white flex flex-col lg:h-[calc(100vh-var(--spacing-navbar))] lg:overflow-hidden">
 
         <div className="w-full px-4 sm:px-6 py-12 flex flex-col md:flex-row items-center gap-12 lg:gap-8 flex-1 lg:min-h-0">
 
-          <div className="flex-1 space-y-6 max-w-3xl lg:max-w-none text-left z-10">
+          <ScrollReveal direction='right' className="flex-1 space-y-6 max-w-3xl lg:max-w-none text-left z-10">
             <div className="flex flex-wrap gap-x-4 gap-y-2 items-center text-[10px] font-bold tracking-[0.15em] text-[--color-brand-primary] uppercase opacity-90">
               <span>ISO 13485:2016</span>
               <span className="text-gray-300">•</span>
@@ -41,10 +40,10 @@ export default function Hero() {
                 </svg>
               </Link>
             </div>
-          </div>
+          </ScrollReveal>
 
 
-          <div className="hidden lg:flex flex-1 justify-end">
+          <ScrollReveal direction='left' className="hidden lg:flex flex-1 justify-end">
             <div className="relative w-[45vw] max-w-[750px] min-w-[500px] aspect-[5/4]">
               <Image
                 src={scissors}
@@ -55,13 +54,13 @@ export default function Hero() {
                 sizes="45vw"
               />
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
 
 
         <div className="w-full bg-gray-50/70 border-t border-b border-[--color-brand-border] py-8">
-          <div className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 specs-grid">
+          <ScrollReveal direction='up' className="w-full px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 specs-grid">
             {specsData.map((spec) => (
               <div key={spec.label} className="space-y-1 spec-item">
                 <span className="label-caps block text-[10px]">{spec.label}</span>
@@ -70,10 +69,9 @@ export default function Hero() {
                 </div>
               </div>
             ))}
-          </div>
+          </ScrollReveal>
         </div>
 
       </section>
-    </ScrollStagger>
   )
 }
