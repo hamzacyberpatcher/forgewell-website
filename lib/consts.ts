@@ -1,25 +1,25 @@
 export const industrialFeatures = [
   {
     id: "01",
-    iconName: "check",
+    iconPath: "animated_icons/check.mp4",
     title: "Zero-Defect Commitment",
     desc: "Statistical Process Control (SPC) on every production run. 100% dimensional inspection with CMM reporting. Defect rate <50 PPM across all product families."
   },
   {
     id: "02",
-    iconName: "gear",
+    iconPath: "animated_icons/gear.mp4",
     title: "Automated Precision",
     desc: "Advanced multi-axis CNC machining and robotic synchronization ensure micro-tolerance repeatability down to ±0.005mm on high-volume production cycles."
   },
   {
     id: "03",
-    iconName: "increase",
+    iconPath: "animated_icons/increase.mp4",
     title: "R&D Innovation",
     desc: "Continuous material science optimization and rapid prototyping capabilities accelerating your product from initial design concept to market-ready validation."
   },
   {
     id: "04",
-    iconName: "wrench",
+    iconPath: "animated_icons/wrench.mp4",
     title: "Proactive Maintenance",
     desc: "Predictive maintenance protocols and automated real-time telemetry tracking minimize line downtime, ensuring uninterrupted supply chain logistics."
   }

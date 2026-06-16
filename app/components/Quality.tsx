@@ -31,7 +31,7 @@ export default function Quality() {
             <span className="card-counter">{item.id}</span>
 
             <div className="card-icon-box bg-white! transition-all duration-300 group-hover:border-brand-primary/20">
-              <HoverVideoIcon iconName={item.iconName} />
+              <HoverVideoIcon iconPath={item.iconPath} />
             </div>
 
             <div>

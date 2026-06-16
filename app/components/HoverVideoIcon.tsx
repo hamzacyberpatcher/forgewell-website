@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from 'react';
 
-export default function HoverVideoIcon({ iconName }: { iconName: string }) {
+export default function HoverVideoIcon({ iconPath }: { iconPath: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function HoverVideoIcon({ iconName }: { iconName: string }) {
   return (
     <video
       ref={videoRef}
-      src={`/animated_icons/${iconName}.mp4`}
+      src={`${iconPath}`}
       muted
       playsInline
       className="w-7 h-7 bg-white object-contain transition-transform duration-300 group-hover:scale-110"
