@@ -30,7 +30,7 @@ export default function Quality() {
           <div key={item.id} className="quality-card h-full group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-brand-primary/50 hover:bg-white z-0 hover:z-10 group-hover/grid:opacity-60 hover:!opacity-100">
             <span className="card-counter">{item.id}</span>
 
-            <div className="card-icon-box bg-white transition-all duration-300 group-hover:border-brand-primary/20">
+            <div className="card-icon-box bg-white! transition-all duration-300 group-hover:border-brand-primary/20">
               <HoverVideoIcon iconName={item.iconName} />
             </div>
 

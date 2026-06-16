@@ -10,7 +10,7 @@ export default function HoverVideoIcon({ iconName }: { iconName: string }) {
     if (!video) return;
 
     const parentCard = video.closest('.quality-card');
-    
+
     if (!parentCard) {
       console.warn("HoverVideoIcon could not find a parent with the class '.quality-card'");
       return;
@@ -43,7 +43,7 @@ export default function HoverVideoIcon({ iconName }: { iconName: string }) {
       muted
       playsInline
       loop
-      className="w-6 h-6 object-contain transition-transform duration-300 group-hover:scale-110"
+      className="w-7 h-7 bg-white object-contain transition-transform duration-300 group-hover:scale-110"
     />
   );
 }
