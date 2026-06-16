@@ -1,7 +1,7 @@
 export const industrialFeatures = [
   {
     id: "01",
-    iconName: "shield",
+    iconName: "check",
     title: "Zero-Defect Commitment",
     desc: "Statistical Process Control (SPC) on every production run. 100% dimensional inspection with CMM reporting. Defect rate <50 PPM across all product families."
   },
@@ -13,7 +13,7 @@ export const industrialFeatures = [
   },
   {
     id: "03",
-    iconName: "bulb",
+    iconName: "increase",
     title: "R&D Innovation",
     desc: "Continuous material science optimization and rapid prototyping capabilities accelerating your product from initial design concept to market-ready validation."
   },
