@@ -1,7 +1,7 @@
 import { industrialFeatures } from "@/lib/consts";
 import ScrollStagger from "@/components/ScrollStagger";
 import ScrollReveal from "@/components/ScrollReveal";
-import HoverVideoIcon from "./HoverVideoIcon";
+import HoverVideoIcon from "@/components/HoverVideoIcon";
 
 export default function Quality() {
   return (
