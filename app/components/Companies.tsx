@@ -28,24 +28,24 @@ const Companies = () => {
       <ScrollReveal className="flex-1 flex flex-col justify-center px-4 sm:px-8 lg:px-16 py-16 lg:py-0">
         
 
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-8 text-gray-500">Trusted by industry leaders</p>
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-8 text-gray-400">Trusted by industry leaders</p>
 
           <div className="relative">
             <span className="absolute -top-8 -left-2 sm:-left-4 text-[8rem] sm:text-[12rem] lg:text-[16rem] font-black leading-none select-none pointer-events-none opacity-10" aria-hidden="true">
               200+
             </span>
 
-            <h2 className="text-black relative text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight max-w-2xl">
+            <h2 className="text-white relative text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight max-w-2xl">
               Built alongside the<br />
               world&apos;s most demanding<br />
-              <span className='text-white'>manufacturers.</span>
+              manufacturers.
             </h2>
           </div>
 
           <div className="mt-10 flex flex-wrap gap-x-10 gap-y-6 border-t border-white/10 pt-8">
             {metrics.map(({ value, label }) => (
               <div key={label} className="flex flex-col gap-1">
-                <span className="text-3xl sm:text-4xl text-black font-bold tracking-tight">
+                <span className="text-3xl sm:text-4xl text-brand-accent font-bold tracking-tight">
                   <SmartCountUp value={value} />
                 </span>
                 <span className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{label}</span>
