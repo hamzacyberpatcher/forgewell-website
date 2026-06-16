@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import { cn } from "@/lib/utils";
 import Footer from './components/Footer';
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = {
   title: 'Forgewell Precision | Component Manufacturing',
@@ -19,10 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn("font-sans", inter.variable)}>
-      
+
       <body>
         <Navbar />
-        {children}
+        <main className='overflow-x-hidden'>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

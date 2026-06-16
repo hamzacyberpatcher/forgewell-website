@@ -6,7 +6,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 
 export default function Hero() {
   return (
-      <section className="relative w-full overflow-x-hidden bg-white flex flex-col lg:h-[calc(100vh-var(--spacing-navbar))] lg:overflow-hidden">
+      <section className="relative w-full bg-white flex flex-col lg:h-[calc(100vh-var(--spacing-navbar))] lg:overflow-hidden">
 
         <div className="w-full px-4 sm:px-6 py-12 flex flex-col md:flex-row items-center gap-12 lg:gap-8 flex-1 lg:min-h-0">
 

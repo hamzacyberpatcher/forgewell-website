@@ -5,7 +5,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export default function IndustrialGrid() {
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-16 flex flex-col py-12">
+    <div className="w-full overflow-x-hidden px-4 sm:px-8 lg:px-16 flex flex-col py-12">
       <ScrollReveal delay={0.2} direction="left">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 pb-10 border-b border-current/10">
           <div className="max-w-2xl">
