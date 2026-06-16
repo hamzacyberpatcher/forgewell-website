@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter, Geist } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/Navbar'
 import { cn } from "@/lib/utils";
 import Footer from './components/Footer';
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'})
+const inter = Inter({subsets:['latin'],variable:'--font-sans'})
 
 export const metadata: Metadata = {
   title: 'Forgewell Precision | Component Manufacturing',
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="en" className={cn("font-sans", inter.variable)}>
       
       <body>
         <Navbar />
