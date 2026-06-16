@@ -48,7 +48,7 @@ const Companies = () => {
                 <span className="text-3xl sm:text-4xl text-brand-accent font-bold tracking-tight">
                   <SmartCountUp value={value} />
                 </span>
-                <span className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{label}</span>
+                <span className="text-xs uppercase tracking-widest text-gray-400 font-semibold">{label}</span>
               </div>
             ))}
           </div>
