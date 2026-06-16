@@ -42,7 +42,6 @@ export default function HoverVideoIcon({ iconName }: { iconName: string }) {
       src={`/animated_icons/${iconName}.mp4`}
       muted
       playsInline
-      loop
       className="w-7 h-7 bg-white object-contain transition-transform duration-300 group-hover:scale-110"
     />
   );
